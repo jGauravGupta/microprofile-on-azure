@@ -106,10 +106,11 @@ That's it! We now have Key Vault running in Azure with a single secret. We can n
 use this resource in our app.
 
 ### Getting up and running locally
+1. `git clone https://github.com/payara/ecosystem-maven.git`
+1. `cd payara-micro-maven-plugin`
+1. Build Payara Micro maven plugin locally using `mvn install`
 1. `git clone https://github.com/JonathanGiles/microprofile-on-azure.git`
 1. `cd keyvault-configsource`
-1. Edit the `pom.xml` file, changing the `payaraMicroAbsolutePath` property to suit your system (I'm
-sure there is a better way to handle this, but it isn't clear to me right now).
 1. Navigate to `src/main/resources/META-INF/microprofile-config.properties` and change the properties in 
 microprofile-config.properties file with details from above.
 1. Try running the server using `mvn clean package payara-micro:start`
